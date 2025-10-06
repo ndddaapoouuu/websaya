@@ -2,35 +2,36 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Kartu Profile</title>
-  <link rel="stylesheet"
-href="style.css">
+  <meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+  <title>SMKS PEMUDA KUTOREJO</title>
+  <link rel="stylesheet"href="style.css">
 </head>
 <body>
-  <div class="id card">
-    <img src="Gemini_Generated_Image_jd0w8bjd0w8bjd0w.jpg" alt="Foto
-Profil">
-    <h2>Nama Siswa</h2>
-    <p>SMKS pemuda</p>
-    <p>Jurusan: TKJ</p>
-    
-    <button onclick="toggleText()">selengkapnya</button>
-    <div id="moreText" style="display: none;">
-       <p>Saya bercita cita menjadi web developer.</p>
-  </div>
-  </div>
-  <script>
-    function toggleText() {
-      var text =
-document.getElementById("moreText");
-      if (text.style.display ===
-"none") {
-        text.style.display =
-"block";
-      } else {
-        text.style.display = "none";
-      }
-    }
-  </script>
+  <header>
+    <div class="Logo"
+      <img src="Logo.png" alt="Logo Sekolah">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Sejarah Singkat</a></li>
+        <li><a href="#">Galeri</a></li>
+        <li><a href="#">E-Learning</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Selamat Datang di<br> 
+    SMK PEMUDA KUTOREJO</h1>
+    <div class="btn-container">
+      <a href="#" class="btn
+biru">Profil</a>
+      <a href="#" class="btn
+putih">Program Keahlian</a>
+    </div>
+  </section>
 </body>
 </html>
