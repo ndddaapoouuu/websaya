@@ -14,12 +14,24 @@ Profil">
     <h2>Nama Siswa</h2>
     <p>SMKS pemuda</p>
     <p>Jurusan: TKJ</p>
-     <title>selengkapnya</title>
-    <button onclick="toggl
-eText()>selengkapnya</button>
+    
+    <button onclick="toggleText()">selengkapnya</button>
     <div id="moreText" style="display: none;">
-      <p>Saya bercita cita menjadi web developer.</p>
+       <p>Saya bercita cita menjadi web developer.</p>
   </div>
   </div>
+  <script>
+    function toggleText() {
+      var text =
+document.getElementById("moreText");
+      if (text.style.display ===
+"none") {
+        text.style.display =
+"block";
+      } else {
+        text.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
