@@ -1,1 +1,73 @@
+. {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
 
+body {
+  background: linear-gradient(to battom right, #1e3c72, #2a5298);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: cencer;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  pandding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  pandding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn.biru {
+  background-color: #00bfff;
+  color: white;
+}
+
+.btn.putih {
+  background-color: white;
+  color: #2a5298;
+}
+
+.btn:hover {
+  transform: scale(1.05};
+}
