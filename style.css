@@ -1,73 +1,147 @@
-. {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  background: linear-gradient(to battom right, #1e3c72, #2a5298);
-  color: white;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: cencer;
-  padding: 20px 60px;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.logo img {
-  height: 50px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.hero {
-  text-align: center;
-  pandding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.btn {
-  pandding: 10px 25px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn.biru {
-  background-color: #00bfff;
-  color: white;
-}
-
-.btn.putih {
-  background-color: white;
-  color: #2a5298;
-}
-
-.btn:hover {
-  transform: scale(1.05};
-}
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kartu Folio Diri - AMANDA SILVIA RIZKI</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root{
+      --pink-1:#ffd6e8;
+      --pink-2:#ff9ac1;
+      --accent:#6b2b6f;
+      --card-bg:#ffffff;
+      --facebook:#1877f2;
+      --instagram:#e4405f;
+      --x:#000000;
+      --linkedin:#0077b5;
+      --apk:#34a853;
+    }
+    html,body{height:100%;margin:0}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--pink-1),var(--pink-2));
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      -webkit-font-smoothing:antialiased;
+      padding:24px;
+    }
+    .card{
+      width:360px;
+      background:var(--card-bg);
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(107,43,111,0.15);
+      overflow:hidden;
+      transition:transform .25s ease,box-shadow .25s ease;
+      animation:fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      from {opacity:0; transform:scale(0.9);}
+      to {opacity:1; transform:scale(1);}
+    }
+    .card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(107,43,111,0.18)}
+    .card__header{
+      background:linear-gradient(90deg,rgba(255,154,193,0.12),rgba(255,214,232,0.12));
+      padding:18px 18px 12px 18px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+    .avatar{
+      width:78px;height:78px;border-radius:14px;overflow:hidden;flex-shrink:0;background:linear-gradient(180deg,#fff,#f8f8f8);display:flex;align-items:center;justify-content:center;border:3px solid rgba(255,154,193,0.18)
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .meta{display:flex;flex-direction:column;gap:6px}
+    .meta__name{font-size:18px;font-weight:700;color:var(--accent)}
+    .meta__role{font-size:13px;color:#7a6a86}
+    .card__body{padding:18px;border-top:1px solid rgba(0,0,0,0.04)}
+    .bio{font-size:13px;line-height:1.45;color:#5a485f;margin-bottom:12px}
+    .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+    .info-item{background:linear-gradient(180deg,#fff,#fff);padding:10px;border-radius:10px;border:1px solid rgba(107,43,111,0.04);font-size:13px}
+    .info-item b{display:block;font-weight:700;color:var(--accent);margin-bottom:6px}
+    .card__footer{display:flex;justify-content:center;gap:20px;padding:18px;border-top:1px solid rgba(0,0,0,0.04)}
+    .social-item{display:flex;flex-direction:column;align-items:center;gap:4px;opacity:0;animation:slideUp 0.8s ease forwards}
+    .social-item:nth-child(1){animation-delay:0.2s}
+    .social-item:nth-child(2){animation-delay:0.4s}
+    .social-item:nth-child(3){animation-delay:0.6s}
+    .social-item:nth-child(4){animation-delay:0.8s}
+    .social-item:nth-child(5){animation-delay:1s}
+    @keyframes slideUp {
+      from {transform:translateY(20px); opacity:0;}
+      to {transform:translateY(0); opacity:1;}
+    }
+    .social-icon{
+      width:36px;
+      height:36px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:white;
+      color:var(--accent);
+      font-size:18px;
+      box-shadow:0 4px 10px rgba(107,43,111,0.15);
+      transition:all .25s ease;
+    }
+    .social-item.facebook .social-icon{color:var(--facebook)}
+    .social-item.instagram .social-icon{color:var(--instagram)}
+    .social-item.x .social-icon{color:var(--x)}
+    .social-item.linkedin .social-icon{color:var(--linkedin)}
+    .social-item.apk .social-icon{color:var(--apk)}
+    .social-icon:hover{
+      transform:scale(1.1);
+      background:currentColor;
+      color:white;
+      box-shadow:0 0 15px currentColor;
+    }
+    .social-label{font-size:12px;color:#6b2b6f;text-align:center;margin-top:4px}
+    @media(max-width:420px){.card{width:100%}.avatar{width:64px;height:64px}.meta__name{font-size:16px}}
+  </style>
+</head>
+<body>
+  <article class="card" aria-label="Kartu Folio Diri">
+    <header class="card__header">
+      <div class="avatar">
+        <img src="foto-amanda.jpeg" alt="Foto Profil AMANDA SILVIA">
+      </div>
+      <div class="meta">
+        <div class="meta__name">AMANDA SILVIA RIZKI</div>
+        <div class="meta__role">SMKS Pemuda Kutorejo</div>
+      </div>
+    </header>
+    <div class="card__body">
+      <p class="bio">Hallo, saya <strong>AMANDA SILVIA</strong> - saya siswa di sekolah <strong>SMKS Pemuda Kutorejo</strong>. Saya suka belajar hal-hal baru, berkreasi dalam desain web, dan mengembangkan keterampilan teknologi untuk masa depan.</p>
+      <div class="info-grid">
+        <div class="info-item"><b>Email</b>amanda.silvia@email.com</div>
+        <div class="info-item"><b>Telepon</b>+62 812-3456-7890</div>
+        <div class="info-item"><b>Keahlian</b>HTML · CSS · JavaScript</div>
+        <div class="info-item"><b>Website</b>amandasilvia.dev</div>
+      </div>
+      <div style="font-size:12px;color:#9a7ea6">Catatan: ukuran foto idealnya persegi (mis. 300×300). Untuk menyesuaikan warna pink ubah variabel di :root.</div>
+    </div>
+    <footer class="card__footer">
+      <div class="social-item facebook">
+        <a href="https://facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <div class="social-label">Facebook</div>
+      </div>
+      <div class="social-item instagram">
+        <a href="https://instagram.com/mndpouuu" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+        <div class="social-label">Instagram</div>
+      </div>
+      <div class="social-item x">
+        <a href="https://x.com/AmandaSilv69999" class="social-icon" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <div class="social-label">X</div>
+      </div>
+      <div class="social-item linkedin">
+        <a href="https://linkedin.com" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <div class="social-label">LinkedIn</div>
+      </div>
+      <div class="social-item apk">
+        <a href="#" class="social-icon" target="_blank"><i class="fa-solid fa-robot"></i></a>
+        <div class="social-label">APK</div>
+      </div>
+    </footer>
+  </article>
+</body>
+</html>
